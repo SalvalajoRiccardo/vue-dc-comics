@@ -101,23 +101,22 @@ header {
       ul{
         list-style: none;
         padding: 20px;
-
-        .active {
-          border-bottom: 3px solid #0c7cec;
-          a{
-            color: #0c7cec;
-          }
-        }
-
         li{
-          height: 90px;
           display: inline-block;
           padding: 10px;
           a {
+            display: inline-block;
             color: black;
             text-decoration: none;
             text-transform: uppercase;
             font-weight: 600;
+            height: 80px;
+          }
+          &:hover, &.active {
+            a{
+            color: #0c7cec;
+            border-bottom: 3px solid #0c7cec;
+            }
           }
         }
       }
