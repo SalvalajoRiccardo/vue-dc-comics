@@ -82,27 +82,42 @@ export default {
 <style scoped lang="scss">
 
 header {
-  background-color: #212121;
-  height: 300px;
-
+  height: 140px;
   .h-container {
     background-color: white;
     display: flex;
     justify-content: space-around;
+    align-items: center;
+    height: 100px;
+    
     #logo-h {
       width: 100px;
+      height: 100%;
+      padding: 20px;
     }
     nav {
       height: 100%;
+      padding: 30px;
       ul{
         list-style: none;
+        padding: 20px;
+
+        .active {
+          border-bottom: 3px solid #0c7cec;
+          a{
+            color: #0c7cec;
+          }
+        }
+
         li{
-          height: 100px;
+          height: 90px;
           display: inline-block;
           padding: 10px;
           a {
             color: black;
             text-decoration: none;
+            text-transform: uppercase;
+            font-weight: 600;
           }
         }
       }
@@ -111,13 +126,7 @@ header {
   }
 }
 
-.active {
-  
-  border-bottom: 2px solid #53b0f0;
-  a{
-    color: #53b0f0;
-  }
-}
+
 
 
 </style>

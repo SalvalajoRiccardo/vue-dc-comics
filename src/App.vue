@@ -1,23 +1,27 @@
 <template>
   <div id="app">
     <Header/>
+    <main>
+      <MainContent/>
+
+    </main>
+    
   </div>
 </template>
 
 <script>
 import Header from './components/Header.vue'
+import MainContent from './components/MainContent.vue'
 
 export default {
   name: 'App',
   components: {
-    Header
+    Header,
+    MainContent
   }
 }
 </script>
 
 <style lang="scss">
-#app {
   @import 'styles/Commons.css';
-  
-}
 </style>
