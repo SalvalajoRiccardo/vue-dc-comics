@@ -1,7 +1,14 @@
 <template>
   <section>
     <div class="m-container">
-      <h2>main content goes here</h2>
+      <div id="jumbo">
+
+      </div>
+
+      <div v-for="(card,index) in Cards" :key="index" class="cards">
+      
+
+      </div>
     </div>
 
   </section>
@@ -9,66 +16,16 @@
 </template>
 
 <script>
+import CardsData from '@/data/CardsData.js';
 export default {
   name: 'MainContent',
-  // data() {
-  //   return {
-  //     links :[
-  //       {
-  //         text: 'characters',
-  //         url:'#',
-  //         current: false,
-  //       },
-  //       {
-  //         text: 'comix',
-  //         url:'#',
-  //         current: true,
-  //       },
-  //       {
-  //         text: 'movies',
-  //         url:'#',
-  //         current: false,
-  //       },
-  //       {
-  //         text: 'tv',
-  //         url:'#',
-  //         current: false,
-  //       },
-  //       {
-  //         text: 'games',
-  //         url:'#',
-  //         current: false,
-  //       },
-  //       {
-  //         text: 'collectibles',
-  //         url:'#',
-  //         current: false,
-  //       },
-  //       {
-  //         text: 'videos',
-  //         url:'#',
-  //         current: false,
-  //       },
-  //       {
-  //         text: 'fans',
-  //         url:'#',
-  //         current: false,
-  //       },
-  //       {
-  //         text: 'news',
-  //         url:'#',
-  //         current: false,
-  //       },
-  //       {
-  //         text: 'shop',
-  //         url:'#',
-  //         current: false,
-  //       }
-        
-  //     ]
-  //   }
-  // }
- 
+  data(){
+    return{
+      Cards: CardsData
+
+    }
+  }
+  
 }
 </script>
 
@@ -77,11 +34,15 @@ export default {
 
 section {
   background-color: black;
-  // da togliere
-  height: 500px;
-  h2 {
-    color: ghostwhite;
+  .m-container {
+    #jumbo {
+      height: 400px;
+      background-image: url('../assets/img/jumbotron.jpg');
+      background-size: cover;
+      
+    }
   }
+  
 }
 
 </style>
